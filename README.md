@@ -9,7 +9,7 @@ This code has been written by
 [Gilles Villard](https://perso.ens-lyon.fr/gilles.villard/),
 to accompany the article
 
-[A] Faster Modular Composition
+[A] _Faster Modular Composition_
 (preprint on [arXiv](https://arxiv.org/abs/2110.08354) and [hal](https://hal.archives-ouvertes.fr/hal-03380258)).
 
 ## Software requirements
