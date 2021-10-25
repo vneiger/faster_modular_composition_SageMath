@@ -162,13 +162,8 @@ if MatRelTests:
                             if b != g(a) % f:
                                 print("BivariateModularCompositionWithRelationMatrix(univ g) FAIL; m,n,d,dg",m,n,d,dg)
 
-
     # MatrixOfRelations
-    for n in [5,10,20]:
-        f = Kxx.random_element(degree=n)
-        a = Kxx.random_element(degree=n-1)
-        # TODO generate examples where CandidateBasis is not enough,
-        # and test MatrixOfRelations
+    # --> has been tested through degenerate examples such as those in file examples.sage
 
 if ChBasTests:
     # ChangeOfBasis
