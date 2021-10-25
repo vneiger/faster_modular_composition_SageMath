@@ -1,0 +1,269 @@
+sage: %runfile examples.sage
+
+
+
+========
+RandomSmall example: random polynomials
+. over Finite Field of size 997
+. with f(x) = 294*x^10 + 695*x^9 + 907*x^8 + 285*x^7 + 139*x^6 + 750*x^5 + 47*x^4 + 937*x^3 + 274*x^2 + 130*x + 671
+. with a(x) = 807*x^9 + 570*x^8 + 453*x^7 + 128*x^6 + 309*x^5 + 319*x^4 + 966*x^3 + 247*x^2 + 298*x + 938
+====================================
+====  Trying MatrixOfRelations  ====
+====================================
+========
+Computing matrix of relations directly, without change of basis
+--> This is done for experimental purpose, to observe whether this does or does not provide a matrix that can be used for composition.
+========
+Chosen parameters: m = 3 and d = 4
+========
+Entering CandidateBasis...
+Returned flag: Cert
+Degree matrix of the returned matrix:
+[4 3 3]
+[3 3 3]
+[3 2 3]
+==> for this input we could have relied on CandidateBasis, without resorting to ChangeOfBasis, since it returns a certified basis of relations.
+===============================================
+====  Entering ModularCompositionBaseCase  ====
+===============================================
+Parameters n , m , d = 10 , 3 , 4
+Input polynomials f,a,g:
+        f = 294*x^10 + 695*x^9 + 907*x^8 + 285*x^7 + 139*x^6 + 750*x^5 + 47*x^4 + 937*x^3 + 274*x^2 + 130*x + 671
+        a = 807*x^9 + 570*x^8 + 453*x^7 + 128*x^6 + 309*x^5 + 319*x^4 + 966*x^3 + 247*x^2 + 298*x + 938
+        g = 144*y^10 + 976*y^9 + 724*y^8 + 126*y^7 + 994*y^6 + 576*y^5 + 741*y^4 + 807*y^3 + 732*y^2 + 703*y + 826
+Initialization and polynomial shifts...
+========
+Change of basis...
+--> found matrix of relations R_gamma:
+[y^4 + 7*y^3 + 106*y^2 + 872*y + 50    330*y^3 + 677*y^2 + 883*y + 653     920*y^3 + 44*y^2 + 448*y + 525]
+[             976*y^2 + 634*y + 808        y^3 + 194*y^2 + 732*y + 475              258*y^2 + 112*y + 992]
+[              27*y^2 + 812*y + 782              125*y^2 + 242*y + 351        y^3 + 575*y^2 + 900*y + 837]
+--> found minimal polynomial mu_gamma:
+         y^10 + 776*y^9 + 715*y^8 + 444*y^7 + 991*y^6 + 944*y^5 + 19*y^4 + 384*y^3 + 777*y^2 + 558*y + 709
+--> found inverse composition alpha:
+         425*y^9 + 793*y^8 + 133*y^7 + 257*y^6 + 100*y^5 + 244*y^4 + 561*y^3 + 931*y^2 + 812*y + 930
+========
+Matrix of relations for alpha,mu_gamma...
+--> found matrix of relations R_alpha:
+[y^4 + 259*y^3 + y^2 + 777*y + 227   194*y^3 + 653*y^2 + 126*y + 886   674*y^3 + 218*y^2 + 354*y + 703]
+[  721*y^3 + 629*y^2 + 317*y + 382       y^3 + 204*y^2 + 111*y + 399    608*y^3 + 98*y^2 + 322*y + 500]
+[    4*y^3 + 350*y^2 + 914*y + 525             632*y^2 + 647*y + 753       y^3 + 942*y^2 + 964*y + 955]
+========
+Composition beta = g(alpha) rem mu_gamma...
+--> beta = 278*y^9 + 284*y^8 + 921*y^7 + 92*y^6 + 986*y^5 + 615*y^4 + 347*y^3 + 424*y^2 + 772*y + 462
+========
+Inverse change of basis b = beta(gamma) rem f...
+--> b = 973*x^9 + 739*x^8 + 481*x^7 + 457*x^6 + 587*x^5 + 279*x^4 + 58*x^3 + 850*x^2 + 251*x + 111
+========
+==> now returning result, b(x-rr[1]) = 973*x^9 + 64*x^8 + 50*x^7 + 231*x^6 + 294*x^5 + 964*x^4 + 149*x^3 + 810*x^2 + 79*x + 196
+========
+Testing result...
+SUCCESS. The algorithm has not failed and has returned the correct polynomial,
+        b = g(a) rem f = 973*x^9 + 64*x^8 + 50*x^7 + 231*x^6 + 294*x^5 + 964*x^4 + 149*x^3 + 810*x^2 + 79*x + 196
+
+
+
+========
+Random example: random polynomials
+. over Finite Field of size 997
+. with f(x) of degree 700
+. with a(x) of degree 699
+====================================
+====  Trying MatrixOfRelations  ====
+====================================
+========
+Computing matrix of relations directly, without change of basis
+--> This is done for experimental purpose, to observe whether this does or does not provide a matrix that can be used for composition.
+========
+Chosen parameters: m = 8 and d = 88
+========
+Entering CandidateBasis...
+Returned flag: Cert
+Degree matrix of the returned matrix:
+[88 88 88 88 87 87 87 87]
+[87 88 88 88 87 87 87 87]
+[87 87 88 88 87 87 87 87]
+[87 87 87 88 87 87 87 87]
+[87 87 87 87 87 87 87 87]
+[87 87 87 87 86 87 87 87]
+[87 87 87 87 86 86 87 87]
+[87 87 87 87 86 86 86 87]
+==> for this input we could have relied on CandidateBasis, without resorting to ChangeOfBasis, since it returns a certified basis of relations.
+===============================================
+====  Entering ModularCompositionBaseCase  ====
+===============================================
+Parameters n , m , d = 700 , 8 , 88
+Initialization and polynomial shifts...
+========
+Change of basis...
+--> found matrix of relations R_gamma, its degree matrix is
+[88 87 87 87 87 87 87 87]
+[87 88 87 87 87 87 87 87]
+[87 87 88 87 87 87 87 87]
+[87 87 87 88 87 87 87 87]
+[86 86 86 86 87 86 86 86]
+[86 86 86 86 86 87 86 86]
+[86 86 86 86 86 86 87 86]
+[86 86 86 86 86 86 86 87]
+--> found minimal polynomial mu_gamma
+--> found inverse composition alpha
+========
+Matrix of relations for alpha,mu_gamma...
+--> found matrix of relations R_alpha, its degree matrix is
+[88 88 88 88 87 87 87 87]
+[87 88 88 88 87 87 87 87]
+[87 87 88 88 87 87 87 87]
+[87 87 87 88 87 87 87 87]
+[87 87 87 87 87 87 87 87]
+[87 87 87 87 86 87 87 87]
+[87 87 87 87 86 86 87 87]
+[87 87 87 87 86 86 86 87]
+========
+Composition beta = g(alpha) rem mu_gamma...
+--> done
+========
+Inverse change of basis b = beta(gamma) rem f...
+--> done, now returning.
+========
+Testing result...
+SUCCESS. The algorithm has not failed and has returned the correct polynomial.
+
+
+
+========
+SingularSmall example, power series case with
+f(x) = x^12
+a(x) = x^6 + x + 1
+====================================
+====  Trying MatrixOfRelations  ====
+====================================
+========
+Computing matrix of relations directly, without change of basis
+--> This is done for experimental purpose, to observe whether this does or does not provide a matrix that can be used for composition.
+========
+Chosen parameters: m = 3 and d = 4
+========
+Entering CandidateBasis...
+Returned flag: NoCert
+Degree matrix of the returned matrix:
+[2 4 4]
+[1 4 4]
+[0 3 4]
+Flag NoCert, verification of the result...
+VerifyMatrixOfRelations Fail: column 1 not relation
+--> this verification failed
+==> for this input we cannot rely on CandidateBasis (without resorting to ChangeOfBasis) to perform modular composition; let us now see if MatrixOfRelations could have sufficed.
+========
+Entering MatrixOfRelations...
+--> this call returned Fail.
+==> for this input one does not get a matrix of relations from either CandidateBasis or MatrixOfRelations; on the other hand, going through ChangeOfBasis will still allow us to perform modular composition.
+===============================================
+====  Entering ModularCompositionBaseCase  ====
+===============================================
+Parameters n , m , d = 12 , 3 , 4
+Input polynomials f,a,g:
+        f = x^12
+        a = x^6 + x + 1
+        g = 861*y^12 + 165*y^11 + 174*y^10 + 284*y^9 + 925*y^8 + 979*y^7 + 531*y^6 + 202*y^5 + 740*y^4 + 656*y^3 + 482*y^2 + 666*y + 873
+Initialization and polynomial shifts...
+========
+Change of basis...
+--> found matrix of relations R_gamma:
+[ y^4 + 327*y^3 + 458*y^2 + 316*y + 22        240*y^3 + 252*y^2 + 424*y + 26       197*y^3 + 540*y^2 + 351*y + 501]
+[      718*y^3 + 248*y^2 + 923*y + 211 y^4 + 124*y^3 + 115*y^2 + 137*y + 903       677*y^3 + 916*y^2 + 236*y + 773]
+[      469*y^3 + 667*y^2 + 656*y + 678       741*y^3 + 111*y^2 + 104*y + 916 y^4 + 361*y^3 + 903*y^2 + 376*y + 681]
+--> found minimal polynomial mu_gamma:
+         y^12 + 812*y^11 + 773*y^10 + 101*y^9 + 173*y^8 + 53*y^7 + 473*y^6 + 515*y^5 + 137*y^4 + 206*y^3 + 792*y^2 + 771*y + 775
+--> found inverse composition alpha:
+         45*y^11 + 801*y^10 + 970*y^9 + 277*y^8 + 481*y^7 + 352*y^6 + 711*y^5 + 210*y^4 + 8*y^3 + 60*y^2 + 966*y + 744
+========
+Matrix of relations for alpha,mu_gamma...
+--> found matrix of relations R_alpha:
+[    y^4 + 747*y^3 + 106*y^2 + 217*y + 369  71*y^4 + 553*y^3 + 310*y^2 + 796*y + 872 624*y^4 + 782*y^3 + 758*y^2 + 921*y + 670]
+[            751*y^3 + 914*y^2 + 7*y + 647      y^4 + 16*y^3 + 541*y^2 + 537*y + 176 788*y^4 + 526*y^3 + 936*y^2 + 568*y + 409]
+[          968*y^3 + 410*y^2 + 262*y + 295           579*y^3 + 796*y^2 + 960*y + 361     y^4 + 759*y^3 + 756*y^2 + 883*y + 631]
+========
+Composition beta = g(alpha) rem mu_gamma...
+--> beta = 678*y^11 + 404*y^10 + 961*y^9 + 837*y^8 + 629*y^7 + 211*y^6 + 242*y^5 + 179*y^4 + 830*y^3 + 708*y^2 + 613*y + 195
+========
+Inverse change of basis b = beta(gamma) rem f...
+--> b = 801*x^11 + 605*x^10 + 296*x^9 + 951*x^8 + 95*x^7 + 25*x^6 + 583*x^5 + 932*x^4 + 270*x^3 + 257*x^2 + 942*x + 232
+========
+==> now returning result, b(x-rr[1]) = 801*x^11 + 340*x^10 + 880*x^9 + 517*x^8 + 642*x^7 + 951*x^6 + 269*x^5 + 688*x^4 + 794*x^3 + 730*x^2 + 573*x + 559
+========
+Testing result...
+SUCCESS. The algorithm has not failed and has returned the correct polynomial,
+        b = g(a) rem f = 801*x^11 + 340*x^10 + 880*x^9 + 517*x^8 + 642*x^7 + 951*x^6 + 269*x^5 + 688*x^4 + 794*x^3 + 730*x^2 + 573*x + 559
+
+
+
+========
+Singular example, power series case with
+f(x) = x^700
+a(x) = x^350 + x + 1
+====================================
+====  Trying MatrixOfRelations  ====
+====================================
+========
+Computing matrix of relations directly, without change of basis
+--> This is done for experimental purpose, to observe whether this does or does not provide a matrix that can be used for composition.
+========
+Chosen parameters: m = 8 and d = 88
+========
+Entering CandidateBasis...
+Returned flag: NoCert
+Degree matrix of the returned matrix:
+[ 2  2  2  2  2  2 88 88]
+[ 1  2  2  2  2  2 88 88]
+[ 0  1  2  2  2  2 88 88]
+[-1  0  1  2  2  2 88 88]
+[-1 -1  0  1  2  2 88 88]
+[-1 -1 -1  0  1  2 88 88]
+[-1 -1 -1 -1  0  1 88 88]
+[-1 -1 -1 -1 -1  0 87 88]
+Flag NoCert, verification of the result...
+VerifyMatrixOfRelations Fail: column 6 not relation
+--> this verification failed
+==> for this input we cannot rely on CandidateBasis (without resorting to ChangeOfBasis) to perform modular composition; let us now see if MatrixOfRelations could have sufficed.
+========
+Entering MatrixOfRelations...
+--> this call returned Fail.
+==> for this input one does not get a matrix of relations from either CandidateBasis or MatrixOfRelations; on the other hand, going through ChangeOfBasis will still allow us to perform modular composition.
+===============================================
+====  Entering ModularCompositionBaseCase  ====
+===============================================
+Parameters n , m , d = 700 , 8 , 88
+Initialization and polynomial shifts...
+========
+Change of basis...
+--> found matrix of relations R_gamma, its degree matrix is
+[88 87 87 87 87 87 87 87]
+[87 88 87 87 87 87 87 87]
+[87 87 88 87 87 87 87 87]
+[87 87 87 88 87 87 87 87]
+[86 86 86 86 87 86 86 86]
+[86 86 86 86 86 87 86 86]
+[86 86 86 86 86 86 87 86]
+[86 86 86 86 86 86 86 87]
+--> found minimal polynomial mu_gamma
+--> found inverse composition alpha
+========
+Matrix of relations for alpha,mu_gamma...
+--> found matrix of relations R_alpha, its degree matrix is
+[88 88 88 88 87 87 87 87]
+[87 88 88 88 87 87 87 87]
+[87 87 88 88 87 87 87 87]
+[87 87 87 88 87 87 87 87]
+[87 87 87 87 87 87 87 87]
+[87 87 87 87 86 87 87 87]
+[87 87 87 87 86 86 87 87]
+[87 87 87 87 86 86 86 87]
+========
+Composition beta = g(alpha) rem mu_gamma...
+--> done
+========
+Inverse change of basis b = beta(gamma) rem f...
+--> done, now returning.
+Testing result...
+SUCCESS. The algorithm has not failed and has returned the correct polynomial.
+
