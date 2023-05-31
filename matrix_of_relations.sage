@@ -44,7 +44,7 @@ def CandidateBasis(f,a,m,d):
 
     """
     Ky.<y> = f.base_ring()[]
-    A = BlockTruncatedPowers(f,a.inverse_mod(f),m,2*(d+1))
+    A = BlockTruncatedPowers(f,a.inverse_mod(f),m,2*d+1)
     F = Matrix.block(Ky,[[Matrix.zero(Ky,m,m),-Matrix.identity(Ky,m)]])
     for k in range(2*d):
         for i in range(m):
