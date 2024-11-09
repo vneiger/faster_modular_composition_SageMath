@@ -10,6 +10,7 @@ This code has been written by
 to accompany the article
 
 [A] _Faster Modular Composition_ , Journal of the ACM, Volume 71, Issue 2, 2024
+
 ([doi](https://doi.org/10.1145/3638349), preprint available on [arXiv](https://arxiv.org/abs/2110.08354) and [hal](https://hal.archives-ouvertes.fr/hal-03380258)).
 
 ## Software requirements
